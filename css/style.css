@@ -203,10 +203,8 @@ header nav img:hover {
 	align-items: center;
 	flex-direction: column;
 	justify-content: center;
-	/* border-style: solid; */
 	border-width: 2px;
 	border-radius: 10px;
-	/* border-color: #fc790f; */
 	gap: 20px;
 	transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
 }
@@ -821,6 +819,11 @@ div.third {
 	height: 100%;
 	overflow-y: hidden;
 	object-fit: contain;
+	transition: 0.3s ease-in-out background-color;
+}
+
+.teachers ul li:hover > div > img {
+	background-color: #fc790f;
 }
 
 .social-links {
@@ -829,7 +832,6 @@ div.third {
 	background: #595959;
 	width: 50%;
 	height: 15%;
-	/* padding: 10px 10px 10px 10px; */
 	display: flex;
 	flex-direction: row;
 	align-items: center;
@@ -839,7 +841,7 @@ div.third {
 	gap: 20px;
 }
 
-.teachers ul>li:hover .social-links{
+.teachers ul > li:hover .social-links {
 	transform: translateY(0);
 	opacity: 1;
 }
@@ -882,49 +884,150 @@ p[difference] {
 	font-weight: 100;
 }
 
-/* .teachers ul li {
-	width: 100%;
-	height: 100%;
-	position: relative;
-	list-style: none;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-}
+/* courses page designing */
 
-.teachers div {
-	width: 100%;
-	height: 100%;
-	overflow-y: hidden;
-}
-
-.teachers ul li div img {
-	width: 100%;
-	height: auto;
-	object-fit: cover;
-	transform: scale(1.1);
-	background-image: linear-gradient(90deg, #e4dddd 0%, #fff 100%);
-	transition: 0.4s ease-in-out transform;
-}
-
-.teachers li:hover img {
-	transform: scale(1);
-}
-
-.teachers footer {
-	width: 100%;
-	height: 10%;
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: space-around;
+.course-header {
 	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
 		Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-	font-size: 1rem;
-	font-weight: 600;
+	font-size: 2.5rem;
+	text-align: center;
+	margin-top: 100px;
 }
 
-p[difference] {
+.mycourses {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 50px;
+}
+
+.mycourses > div {
+	width: 100%;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.mycourses > div > a {
+	width: 100px;
+	border: none;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+		Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+	background: #fc790f;
+	font-size: 1.1rem;
+	text-align: center;
+	text-decoration: none;
+	padding: 10px;
+	font-weight: 500;
+	transition: 0.2s ease-in-out color, 0.2s ease-in-out background-color;
+}
+
+.mycourses > div > a:hover {
+	color: #fc790f;
+	background-color: #292929;
+}
+
+.mycourses ul {
+	display: grid;
+	list-style-type: none;
+	grid-gap: 2rem;
+	grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+	grid-auto-rows: 30rem;
+	grid-auto-flow: dense;
+	padding: 30px 100px 30px 100px;
+	margin-bottom: 30px;
+}
+
+.mycourses ul li {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid #fc790f;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+		Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+	position: relative;
+}
+
+.mycourses ul li>p{
+	width: auto;
+	top: 15px;
+	left: 15px;
+	padding: 5px;
+	position: absolute;
+	font-weight: 500;
+	z-index: 1;
+	background: #fff;
+}
+
+.mycourses ul li div[image] {
+	width: 100%;
+	height: 60%;
+	display: flex;
+	align-items: center;
+	overflow-y: hidden;
+	justify-content: center;
+}
+
+.mycourses ul li div[image] img {
+	width: 100%;
+	height: 100%;
+	border: none;
+	object-fit: cover;
+	transform: scale(1);
+	transition: 0.3s ease-in-out transform;
+}
+
+.mycourses ul li:hover div[image] img {
+	transform: scale(1.2);
+}
+
+.mycourses ul li div[paragraph] {
+	width: 80%;
+	height: 30%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+}
+
+.mycourses div[paragraph] h2 {
+	font-size: 1.5rem;
+	font-weight: 500;
+	text-transform: capitalize;
+}
+
+.mycourses div[paragraph] p {
+	text-align: center;
 	font-weight: 100;
-} */
+}
+
+.mycourses div[paragraph] a {
+	font-size: 1.1rem;
+	font-weight: 500;
+	background: #fc790f;
+	text-decoration: none;
+	padding: 7px;
+	transition: 0.2s ease-in-out background-color, 0.2s ease-in-out color;
+}
+
+.mycourses div[paragraph] a:hover {
+	background-color: #292929;
+	color: #fc790f;
+}
+
+.mycourses ul li div[underline] {
+	width: 80%;
+	height: 1px;
+	background: #fc790f;
+}
+
+.mycourses ul li div[time] {
+	width: 80%;
+	height: 10%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	font-weight: 300;
+}
