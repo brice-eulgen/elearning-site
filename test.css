@@ -1,37 +1,45 @@
-*{
-  margin: 0;
-  padding: 0;
-}
+* { 
+	box-sizing: border-box; 
+} 
 
-.container{
+body { 
   width: 100%;
   height: 100vh;
-  display: grid;
-  grid-template-columns: 1fr 3fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 20px;
-}
+	display: flex; 
+  flex-direction: row;
+	justify-content: center; 
+	align-items: center; 
+} 
 
-.first{
-  background: yellow;
-  grid-row-start: 1;
-  grid-row-end: 3;
-}
+.carousel { 
+	position: relative; 
+	width: 270px; 
+	height: 160px; 
+	overflow: hidden; 
+	background-color: #cdcdcd; 
+} 
 
-.second{
-  background: green;
-}
+.carousel-item .slide-image { 
+	width: 270px; 
+	height: 160px; 
+	background-size: cover; 
+	background-repeat: no-repeat; 
+} 
 
-.third{
-  background: blue;
-  grid-column-start: 3;
-  grid-column-end: 4;
-  grid-row-start: -3;
-  grid-row-end: -1;
-}
+.carousel-item { 
+	position: absolute; 
+	width: 100%; 
+	height: 270px; 
+	border: none; 
+	top: 0; 
+	left: 100%; 
+} 
 
-.fourth{
-  background: red;
-  grid-column-start: 2;
-  grid-column-end: 3;
-}
+.carousel-item.active { 
+	left: 0; 
+	transition: all 0.3s ease-out; 
+} 
+
+.carousel-item div { 
+	height: 100%; 
+} 

@@ -1004,11 +1004,11 @@ p[difference] {
 }
 
 .mycourses div[paragraph] a {
-	font-size: 1.1rem;
+	font-size: 0.9rem;
 	font-weight: 500;
 	background: #fc790f;
 	text-decoration: none;
-	padding: 7px;
+	padding: 5px;
 	transition: 0.2s ease-in-out background-color, 0.2s ease-in-out color;
 }
 
