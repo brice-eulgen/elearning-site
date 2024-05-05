@@ -24,7 +24,7 @@ header a {
 	flex: 0.25;
 	font-weight: 900;
 	text-decoration: none;
-	margin-left: 30px;
+	margin-left: 5%;
 	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
 		Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
@@ -48,8 +48,14 @@ header ul {
 	gap: 30px;
 }
 
+header nav ul li {
+	width: 100px;
+}
+
 header nav ul a {
+	width: 100%;
 	font-weight: 500;
+	font-size: 1rem;
 	transition: color 0.2s ease-in-out;
 }
 
@@ -63,7 +69,7 @@ header nav img {
 	width: 30px;
 	border: 2px solid #000;
 	border-radius: 100%;
-	margin-left: 300px;
+	margin-left: 5%;
 	transition: background-color 0.2s ease-in-out;
 }
 
@@ -90,7 +96,7 @@ header nav img:hover {
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-around;
-	margin-bottom: 100px;
+	margin-bottom: 30px;
 }
 
 .left {
@@ -99,7 +105,7 @@ header nav img:hover {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	align-items: center;
+	align-items: flex-start;
 	margin-left: 40px;
 }
 
@@ -120,7 +126,7 @@ header nav img:hover {
 
 .first-presentation div h1 {
 	text-transform: capitalize;
-	text-align: center;
+	text-align: left;
 	font-size: 50px;
 	margin-bottom: 30px;
 	background: none;
@@ -140,7 +146,7 @@ header nav img:hover {
 	height: 50px;
 	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
 		Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-	font-weight: 700;
+	font-weight: 600;
 	font-size: 15px;
 	background: #fc790f;
 	border: none;
@@ -152,7 +158,33 @@ header nav img:hover {
 	color: #fc790f;
 	background: #292929;
 }
+/* use media queries */
 
+@media screen and (max-width: 1205px) {
+	.first-presentation div h1 {
+		font-size: 2.5rem;
+	}
+}
+
+@media screen and (max-width: 994px) {
+	.first-presentation div h1 {
+		font-size: 1.5rem;
+	}
+	.first-presentation div p {
+		font-size: 0.7rem;
+		text-align: start;
+	}
+	.first-presentation div button{
+		font-size: 0.7rem;
+		width: 75px;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.first-presentation div h1 {
+		font-size: 1.3rem;
+	}
+}
 /* Popular subjects section */
 
 .popular-subject {
@@ -177,7 +209,7 @@ header nav img:hover {
 
 .popular-subject div {
 	width: 80%;
-	height: 300px;
+	height: 500px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -186,6 +218,7 @@ header nav img:hover {
 .popular-subject div ul {
 	list-style: none;
 	display: flex;
+	flex-wrap: wrap;
 	width: 100%;
 	height: 100%;
 	display: flex;
@@ -197,8 +230,8 @@ header nav img:hover {
 }
 
 .popular-subject div ul li {
-	width: 100%;
-	height: 100%;
+	width: 15%;
+	height: 50%;
 	display: flex;
 	align-items: center;
 	flex-direction: column;
@@ -885,7 +918,7 @@ p[difference] {
 }
 
 /* testimonials desigining */
-.testimonials{
+.testimonials {
 	width: 100%;
 	height: 500px;
 	display: flex;
@@ -900,80 +933,84 @@ p[difference] {
 }
 
 figure.snip1390 {
-  position: relative;
-  overflow: hidden;
-  margin: 10px;
-  min-width: 230px;
-  max-width: 315px;
-  height: 100%;
-  width: 100%;
-  color: #000000;
-  text-align: center;
-  font-size: 16px;
-  background-color: whitesmoke;
-  padding: 30px;
-  background-image: linear-gradient(-25deg, rgba(0, 0, 0, 0.2) 0%, rgba(255, 255, 255, 0.1) 100%);
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+	position: relative;
+	overflow: hidden;
+	margin: 10px;
+	min-width: 230px;
+	max-width: 315px;
+	height: 100%;
+	width: 100%;
+	color: #000000;
+	text-align: center;
+	font-size: 16px;
+	background-color: whitesmoke;
+	padding: 30px;
+	background-image: linear-gradient(
+		-25deg,
+		rgba(0, 0, 0, 0.2) 0%,
+		rgba(255, 255, 255, 0.1) 100%
+	);
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
 	border: 1px solid #fc790f;
 	border-radius: 10px;
 }
 figure.snip1390 *,
 figure.snip1390 *:before,
 figure.snip1390 *:after {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-transition: all 0.35s ease;
-  transition: all 0.35s ease;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-transition: all 0.35s ease;
+	transition: all 0.35s ease;
 }
 figure.snip1390 figcaption {
-  width: 100%;
+	width: 100%;
 }
 figure.snip1390 h2,
 figure.snip1390 h4,
 figure.snip1390 blockquote {
-  margin: 0;
+	margin: 0;
 }
 figure.snip1390 h2,
 figure.snip1390 h4 {
-  font-weight: 300;
+	font-weight: 300;
 }
 figure.snip1390 h2 {
-  color: #000;
+	color: #000;
 	font-weight: 500;
 }
 figure.snip1390 h4 {
-  color: #595959;
+	color: #595959;
 	font-weight: 300;
 }
 figure.snip1390 blockquote {
-  font-size: 1em;
-  padding: 45px 20px 40px 50px;
-  margin-top: 30px;
-  background-color: #ffffff;
-  border-radius: 5px;
-  box-shadow: inset -1.4px -1.4px 2px rgba(0, 0, 0, 0.3);
-  text-align: left;
-  position: relative;
+	font-size: 1em;
+	padding: 45px 20px 40px 50px;
+	margin-top: 30px;
+	background-color: #ffffff;
+	border-radius: 5px;
+	box-shadow: inset -1.4px -1.4px 2px rgba(0, 0, 0, 0.3);
+	text-align: left;
+	position: relative;
 	font-weight: 100;
 	font-style: italic;
 }
 figure.snip1390 blockquote:before {
-  content: "\201C";
-  position: absolute;
-  font-size: 70px;
-  opacity: 0.25;
-  font-style: normal;
-  top: 0px;
-  left: 20px;
+	content: "\201C";
+	position: absolute;
+	font-size: 70px;
+	opacity: 0.25;
+	font-style: normal;
+	top: 0px;
+	left: 20px;
 }
 figure.snip1390 .profile {
-  width: 100px;
-  border-radius: 50%;
-  display: inline-block;
-  box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.4);
-  margin-bottom: 10px;
-  border: solid 2px #fc790f;
+	width: 100px;
+	border-radius: 50%;
+	display: inline-block;
+	box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.4);
+	margin-bottom: 10px;
+	border: solid 2px #fc790f;
 }
 
 /* courses page designing */
@@ -1041,7 +1078,7 @@ figure.snip1390 .profile {
 	position: relative;
 }
 
-.mycourses ul li>p{
+.mycourses ul li > p {
 	width: auto;
 	top: 15px;
 	left: 15px;
